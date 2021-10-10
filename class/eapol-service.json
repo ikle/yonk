@@ -1,0 +1,85 @@
+{
+	"link": {
+		"kind": "attr",
+		"desc": "Ethernet интерфейс",
+		"mode": "set",
+		"type": "ethernet-link"
+	},
+
+	"version": {
+		"kind": "attr",
+		"desc": "Версия протокола",
+		"type": "number",
+		"limit": [["ge", 1], ["le", 2]],
+		"default": 2
+	},
+
+	"reauth": {
+		"kind": "attr",
+		"desc": "Период переаутентификации в секундах",
+		"enum": {
+			"off": "Переаутентификация отключена"
+		},
+		"type": "number",
+		"limit": [["ge", 1], ["le", 86400]],
+		"default": "3600"
+	},
+
+	"pae-group": {
+		"kind": "attr",
+		"desc": "Использовать групповой PAE адрес",
+		"enum": {
+			"on":  "Использовать групповой адрес",
+			"off": "Использовать целевой адрес"
+		},
+		"default": "on"
+	},
+
+	"nas": {
+		"kind": "group",
+		"desc": "Параметры сервера доступа",
+		"body": {
+			"ident": {
+				"kind": "attr",
+				"desc": "NAS-Identifier",
+				"limit": [["len-ge", 1]]
+			},
+
+			"own-ip": {
+				"kind": "attr",
+				"desc": "NAS-IP-Address",
+				"type": "ipv4-address"
+			},
+
+			"address": {
+				"kind": "attr",
+				"desc": "Адрес RADIUS сервера",
+				"type": "ip-target"
+			},
+
+			"auth-port": {
+				"kind": "attr",
+				"desc": "Порт аутентификации",
+				"type": "ip-service",
+				"default": "radius"
+			},
+
+			"auth-key": {
+				"kind": "attr",
+				"desc": "Ключ доступа к сервису аутентификации"
+			},
+
+			"acct-port": {
+				"kind": "attr",
+				"desc": "Порт регистрации",
+				"type": "ip-service",
+				"default": "radius-acct"
+			},
+
+			"acct-key": {
+				"kind": "attr",
+				"desc": "Ключ доступа к сервису регистрации"
+			}
+		}
+	}
+}

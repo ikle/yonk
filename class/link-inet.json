@@ -1,0 +1,21 @@
+{
+	"address": {
+		"kind": "attr",
+		"desc": "IP адрес",
+		"mode": "set",
+		"enum": {
+			"dhcp": "Получить адрес по DHCP"
+		},
+		"type": "ip-masked"
+	},
+
+	"proxy-arp": {
+		"kind": "attr",
+		"desc": "Проксирование ARP",
+		"enum": {
+			"on":  "Включено",
+			"off": "Выключено"
+		},
+		"default": "off"
+	}
+}

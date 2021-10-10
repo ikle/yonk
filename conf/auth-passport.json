@@ -1,0 +1,20 @@
+{
+	"system": {
+		"kind": "group",
+		"body": {
+			"auth": {
+				"kind": "group",
+				"desc": "Паспорт аутентификации",
+				"body": {
+					"passport": {
+						"kind": "node",
+						"desc": "Паспорт аутентификации",
+						"type": "name",
+						"class": ["auth-passport"],
+						"priority": "130"
+					}
+				}
+			}
+		}
+	}
+}

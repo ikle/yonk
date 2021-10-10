@@ -1,0 +1,16 @@
+{
+	"interfaces": {
+		"kind": "group",
+		"body": {
+			"ethernet": {
+				"kind": "node",
+				"class": ["link-supplicant"]
+			},
+
+			"bonding": {
+				"kind": "node",
+				"class": ["link-supplicant"]
+			}
+		}
+	}
+}

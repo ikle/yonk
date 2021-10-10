@@ -1,0 +1,24 @@
+{
+	"interfaces": {
+		"kind": "group",
+		"body": {
+			"ethernet": {
+				"kind": "node",
+				"class": ["eapol-supplicant"]
+			}
+		}
+	},
+
+	"system": {
+		"kind": "group",
+		"body": {
+			"eapol": {
+				"kind": "node",
+				"desc": "Паспорт EAPoL",
+				"type": "name",
+				"class": ["eapol-passport"],
+				"priority": "130"
+			}
+		}
+	}
+}

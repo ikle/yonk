@@ -1,0 +1,39 @@
+{
+	"interfaces": {
+		"kind": "group",
+		"body": {
+			"ethernet": {
+				"kind": "node",
+				"class": ["link-bridge-port"],
+				"body": {
+					"vlan": {
+						"kind": "node",
+						"class": ["link-bridge-port"]
+					}
+				}
+			},
+
+			"bonding": {
+				"kind": "node",
+				"class": ["link-bridge-port"],
+				"body": {
+					"vlan": {
+						"kind": "node",
+						"class": ["link-bridge-port"]
+					}
+				}
+			},
+
+			"bridge": {
+				"kind": "node",
+				"desc": "Мостовой интерфейс",
+				"class": [
+					"link",
+					"link-bridge",
+					"link-ethernet",
+					"link-inet"
+				]
+			}
+		}
+	}
+}

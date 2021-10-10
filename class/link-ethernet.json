@@ -1,0 +1,15 @@
+{
+	"mac": {
+		"kind": "attr",
+		"desc": "MAC адрес",
+		"type": "macaddr"
+	},
+
+	"vlan": {
+		"kind": "node",
+		"desc": "Идентификатор виртуальной сети",
+		"type": "number",
+		"limit": [["ge", 1], ["le", 4094]],
+		"class": ["link", "link-inet"]
+	}
+}

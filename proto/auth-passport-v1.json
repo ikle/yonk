@@ -1,0 +1,67 @@
+{
+	"phase": {
+		"kind": "node",
+		"desc": "Фаза аутентификации",
+		"type": "number",
+		"limit": [["ge", 1], ["le", 10]],
+		"body": {
+			"method": {
+				"kind": "attr",
+				"desc": "Метод аутентификации",
+				"mode": "set",
+				"enum": {
+					"eap-peap-0":	"EAP-PEAPv0",
+					"eap-peap":	"EAP-PEAP",
+					"eap-ttls":	"EAP-TTLS",
+
+					"eap-md5":	"EAP-MD5-Challenge",
+					"eap-tls":	"EAP-TLS",
+					"eap-mschap-2":	"EAP-MSCHAPv2",
+					"eap-fast":	"EAP-FAST",
+					"eap-gtc":	"EAP-GTC",
+
+					"eap-pwd":	"EAP-pwd",
+					"eap-pax":	"EAP-PAX",
+					"eap-sake":	"EAP-SAKE",
+					"eap-gpsk":	"EAP-GPSK",
+
+					"pap":		"PAP",
+					"chap":		"CHAP",
+					"mschap":	"MS-CHAP",
+					"mschap-2":	"MS-CHAPv2"
+				}
+			},
+
+			"ident": {
+				"kind": "attr",
+				"desc": "Имя пользователя или идентификатор"
+			},
+
+			"key-format": {
+				"kind": "attr",
+				"desc": "Формат ключа",
+				"enum": {
+					"hex-dump": "Шестнадцатеричный дамп",
+					"plain":    "Строка печатных символов"
+				},
+				"default": "plain"
+			},
+
+			"key": {
+				"kind": "attr",
+				"desc": "Пароль, ключ или ключевая фраза"
+			},
+
+			"cert": {
+				"kind": "attr",
+				"desc": "Имя X.509 сертификата",
+				"ref": ["pki", "ca", "*", "certificate"]
+			},
+
+			"cert-key": {
+				"kind": "attr",
+				"desc": "Пароль или ключевая фраза сертификата"
+			}
+		}
+	}
+}

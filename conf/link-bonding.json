@@ -1,0 +1,22 @@
+{
+	"interfaces": {
+		"kind": "group",
+		"body": {
+			"ethernet": {
+				"kind": "node",
+				"class": ["link-bonding-port"]
+			},
+
+			"bonding": {
+				"kind": "node",
+				"desc": "Агрегированный интерфейс",
+				"class": [
+					"link",
+					"link-bonding",
+					"link-ethernet",
+					"link-inet"
+				]
+			}
+		}
+	}
+}

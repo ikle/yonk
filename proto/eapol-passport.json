@@ -1,0 +1,70 @@
+{
+	"phase1": {
+		"kind": "group",
+		"desc": "Первая фаза аутентификации",
+		"body": {
+			"method": {
+				"kind": "attr",
+				"desc": "Метод аутентификации",
+				"enum": {
+					"md5": "EAP-MD5",
+					"tls": "EAP-TLS",
+					"mschapv2": "EAP-MSCHAPV2",
+					"peap": "EAP-PEAP",
+					"ttls": "EAP-TTLS"
+				}
+			},
+
+			"ident": {
+				"kind": "attr",
+				"desc": "Имя пользователя или идентификатор"
+			},
+
+			"key": {
+				"kind": "attr",
+				"desc": "Пароль или ключевая фраза"
+			},
+
+			"cert": {
+				"kind": "attr",
+				"desc": "X.509 сертификат",
+				"ref": ["pki", "ca", "*", "certificate"]
+			}
+		}
+	},
+
+	"phase2": {
+		"kind": "group",
+		"desc": "Вторая фаза аутентификации",
+		"body": {
+			"method": {
+				"kind": "attr",
+				"desc": "Метод аутентификации",
+				"mode": "set",
+				"enum": {
+					"md5": "EAP-MD5",
+					"tls": "EAP-TLS",
+					"mschapv2": "MS-CHAPv2 или EAP-MSCHAPV2",
+					"pap": "PAP",
+					"chap": "CHAP"
+				}
+			},
+
+			"ident": {
+				"kind": "attr",
+				"desc": "Имя пользователя или идентификатор"
+			},
+
+			"key": {
+				"kind": "attr",
+				"desc": "Пароль или ключевая фраза"
+			},
+
+			"cert": {
+				"kind": "attr",
+				"desc": "X.509 сертификат",
+				"ref": ["pki", "ca", "*", "certificate"]
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"bonding": {
+		"kind": "group",
+		"desc": "Параметры агрегирования порта",
+		"body": {
+			"group": {
+				"kind": "attr",
+				"desc": "Группа агрегирования сетевых интерфейсов",
+				"type": "name",
+				"ref": ["interfaces", "bonding"]
+			},
+
+			"port-id": {
+				"kind": "attr",
+				"desc": "Номер порта 802.3ad",
+				"type" : "number",
+				"limit": [["ge", 1], ["le", 65535]],
+				"requires": "group"
+			}
+		}
+	}
+}

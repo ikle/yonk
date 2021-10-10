@@ -1,0 +1,31 @@
+{
+	"supplicant": {
+		"kind": "group",
+		"desc": "Параметры EAPoL и MACsec",
+		"body": {
+			"passport": {
+				"kind": "attr",
+				"desc": "Параметры аутентификации",
+				"type": "name",
+				"ref": ["system", "auth", "passport"]
+			},
+
+			"eapol-version": {
+				"kind": "attr",
+				"desc": "Версия протокола EAPoL",
+				"type": "number",
+				"limit": [["ge", 1], ["le", 3]]
+			},
+
+			"macsec": {
+				"kind": "attr",
+				"desc": "Использование L2 шифрования",
+				"enum": {
+					"on":  "Включено",
+					"off": "Выключено"
+				},
+				"default" : "off"
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"interfaces": {
+		"kind": "group",
+		"body": {
+			"ethernet": {
+				"kind": "node",
+				"desc": "Ethernet интерфейс",
+				"class": [
+					"link",
+					"link-ethernet-device",
+					"link-ethernet",
+					"link-inet"
+				]
+			}
+		}
+	}
+}

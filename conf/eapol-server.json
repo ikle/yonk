@@ -1,0 +1,13 @@
+{
+	"service": {
+		"kind": "group",
+		"body": {
+			"eapol": {
+				"kind": "node",
+				"desc": "Сервис EAPoL",
+				"type": "name",
+				"class": ["eapol-service"]
+			}
+		}
+	}
+}

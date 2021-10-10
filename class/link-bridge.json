@@ -1,0 +1,43 @@
+{
+	"ageing": {
+		"kind": "attr",
+		"desc": "Время хранения MAC адресов",
+		"type": "number",
+		"limit": [["ge", 1], ["le", 86400]],
+		"default": 300
+	},
+
+	"forwarding-delay": {
+		"kind": "attr",
+		"desc": "Задержка перенаправления после изменения топологии",
+		"type": "number",
+		"limit": [["ge", 2], ["le", 30]],
+		"default": 15
+	},
+
+	"hello-time": {
+		"kind": "attr",
+		"desc": "Интервал посылки hello-пакета",
+		"type": "number",
+		"limit": [["ge", 1], ["le", 10]],
+		"default": 2
+	},
+
+	"priority": {
+		"kind": "attr",
+		"desc": "Приоритет для данного моста",
+		"type": "number",
+		"limit": [["ge", 0], ["le", 65535]],
+		"default": 32768
+	},
+
+	"stp": {
+		"kind": "attr",
+		"desc": "Поддержка протокола STP",
+		"enum": {
+			"on":  "Включено",
+			"off": "Выключено"
+		},
+		"default": "off"
+	}
+}

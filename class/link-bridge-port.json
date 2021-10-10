@@ -1,0 +1,30 @@
+{
+	"bridge": {
+		"kind": "group",
+		"desc": "Параметры порта cетевого моста",
+		"body": {
+			"group": {
+				"kind": "attr",
+				"desc": "Группа cетевого моста",
+				"type": "name",
+				"ref": ["interfaces", "bridge"]
+			},
+
+			"cost": {
+				"kind": "attr",
+				"desc": "Стоимость маршрута для данного порта",
+				"type" : "number",
+				"limit": [["ge", 1], ["le", 65535]],
+				"requires": "group"
+			},
+
+			"priority": {
+				"kind": "attr",
+				"desc": "Приоритет порта",
+				"type" : "number",
+				"limit": [["ge", 0], ["le", 63]],
+				"requires": "group"
+			}
+		}
+	}
+}
