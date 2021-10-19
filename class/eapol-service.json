@@ -22,7 +22,7 @@
 		},
 		"type": "number",
 		"limit": [["ge", 1], ["le", 86400]],
-		"default": "3600"
+		"default": 3600
 	},
 
 	"pae-group": {

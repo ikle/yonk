@@ -27,6 +27,9 @@ def vyatta_type (node):
 	core = 'txt'
 
 	if 'enum' in node:
+		if 'type' in node and node['type'] == 'number':
+			return 'u32, ' + core
+
 		return core
 
 	if not 'type' in node:
