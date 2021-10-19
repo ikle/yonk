@@ -4,7 +4,7 @@
 		"body": {
 			"auth": {
 				"kind": "group",
-				"desc": "Паспорт аутентификации",
+				"desc": "Параметры аутентификации",
 				"body": {
 					"passport": {
 						"kind": "node",
