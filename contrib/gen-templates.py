@@ -151,6 +151,17 @@ def write_checks (f, node):
 		if expr != None:
 			f.write ('syntax:expression: ' + expr + '\n')
 
+def write_comp (f, node):
+	if 'enum' in node or not 'type' in node:
+		return
+
+	path = os.path.join ('script', 'list', node['type'])
+
+	if not os.path.isfile (path):
+		return
+
+	f.write ('allowed: /usr/lib/yonk/list/' + node['type'] + '\n')
+
 def write_helps (f, node):
 	default = node['default'] if 'default' in node else None
 
@@ -217,6 +228,7 @@ def build_conf (root, node):
 
 			write_ref    (f, node)
 			write_checks (f, node)
+			write_comp   (f, node)
 
 		if 'default' in node:
 			fmt = '\ndefault: {}\n'
