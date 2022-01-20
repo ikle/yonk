@@ -1,7 +1,7 @@
 {
 	"address": {
 		"kind": "attr",
-		"desc": "IP адрес",
+		"desc": "IP адрес с маской сети",
 		"mode": "set",
 		"enum": {
 			"dhcp": "Получить адрес по DHCP"
